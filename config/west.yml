@@ -6,8 +6,6 @@ manifest:
       url-base: https://github.com/elpekenin
     - name: MickiusMousius
       url-base: https://github.com/MickiusMousius
-    - name: m165437
-      url-base: https://github.com/M165437
 
   projects:
     - name: zmk
@@ -30,10 +28,6 @@ manifest:
     - name: zmk-patch-ec11
       remote: MickiusMousius
       revision: main
-
-    - name: nice-view-gem
-      remote: m165437
-      revision: v0.3.0
 
   self:
     path: config
