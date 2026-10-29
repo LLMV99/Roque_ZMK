@@ -1,0 +1,370 @@
+layout: {zmk_keyboard: roque}
+layers:
+  MacOS:
+  - - '`'
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - {t: BSPC, h: Alt+BSPC}
+  - [TAB, A, S, D, F, G, H, J, K, L, ;, \]
+  - - {t: '&caps_word', h: LSHIFT}
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - F16
+    - F17
+    - N
+    - M
+    - ','
+    - .
+  - - /
+    - ''''
+    - Settings
+    - LCTRL
+    - LGUI
+    - {t: SPACE, h: Number Pad}
+    - {t: ENTER, h: F Keys (Mac)}
+    - '&td1'
+    - {t: APP, h: RGUI}
+    - DEL
+  Windows:
+  - - '`'
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - {t: BSPC, h: Alt+BSPC}
+  - [TAB, A, S, D, F, G, H, J, K, L, ;, \]
+  - - {t: '&caps_word', h: LSHIFT}
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - F16
+    - F17
+    - N
+    - M
+    - ','
+    - .
+  - - /
+    - ''''
+    - Settings
+    - LGUI
+    - LCTRL
+    - {t: SPACE, h: Number Pad}
+    - {t: ENTER, h: F Keys (Win)}
+    - '&td2'
+    - {t: APP, h: RCTRL}
+    - DEL
+  iPad:
+  - - '`'
+    - Q
+    - W
+    - E
+    - R
+    - T
+    - Y
+    - U
+    - I
+    - O
+    - P
+    - {t: BSPC, h: Alt+BSPC}
+  - [TAB, A, S, D, F, G, H, J, K, L, ;, \]
+  - - {t: '&caps_word', h: LSHIFT}
+    - Z
+    - X
+    - C
+    - V
+    - B
+    - F16
+    - F17
+    - N
+    - M
+    - ','
+    - .
+  - - /
+    - ''''
+    - Settings
+    - LCTRL
+    - LGUI
+    - {t: SPACE, h: Number Pad}
+    - {t: ENTER, h: F Keys (Mac)}
+    - '&td1'
+    - {t: APP, h: RGUI}
+    - DEL
+  Symbols (Mac):
+  - [_, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', DEL]
+  - - {t: ▽, type: trans}
+    - '!'
+    - '@'
+    - '#'
+    - $
+    - '%'
+    - ^
+    - '&'
+    - '*'
+    - (
+    - )
+    - '-'
+  - - {t: ▽, type: trans}
+    - Ctl+Gui+SPACE
+    - '{'
+    - '}'
+    - '|'
+    - '='
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '%'
+    - +
+    - '['
+    - ']'
+  - - \
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Symbols (Win):
+  - [_, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', DEL]
+  - - {t: ▽, type: trans}
+    - '!'
+    - '@'
+    - '#'
+    - $
+    - '%'
+    - ^
+    - '&'
+    - '*'
+    - (
+    - )
+    - '-'
+  - - {t: ▽, type: trans}
+    - Gui+.
+    - '{'
+    - '}'
+    - '|'
+    - '='
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '%'
+    - +
+    - '['
+    - ']'
+  - - \
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  Number Pad:
+  - - {t: ▽, type: trans}
+    - '1'
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - '!'
+    - '@'
+    - '#'
+    - $
+    - '%'
+    - ^
+    - '4'
+    - '5'
+    - {t: '6', h: (}
+    - {t: +, h: )}
+    - '-'
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '{'
+    - '}'
+    - '|'
+    - '='
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '%'
+    - '1'
+    - {t: '2', h: ','}
+    - {t: '3', h: .}
+  - - KP DIVIDE
+    - KP MULTIPLY
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: Number Pad, h: toggle}
+    - KP DOT
+    - '0'
+  F Keys (Mac):
+  - - {t: ESCAPE, h: OUT TOG}
+    - {t: F1, h: '&btsel'}
+    - {t: F2, h: '&btsel 1'}
+    - {t: F3, h: '&btsel 2'}
+    - {t: F4, h: '&btsel 3'}
+    - {t: F5, h: '&btsel 4'}
+    - F6
+    - F7
+    - F8
+    - F9
+    - F10
+    - F11
+  - - Sft+TAB
+    - '&mac_talk'
+    - {t: ▽, type: trans}
+    - PREV
+    - PP
+    - NEXT
+    - Gui+LEFT
+    - UP
+    - Gui+RIGHT
+    - '&mac_cap_app'
+    - PG UP
+    - F12
+  - - {t: ▽, type: trans}
+    - '&bl BL_TOG'
+    - '&bl BL_SET 4'
+    - VOL DN
+    - MUTE
+    - VOL UP
+    - MUTE
+    - '&mkp LCLK'
+    - LEFT
+    - DOWN
+    - RIGHT
+    - Gui+Sft+4
+  - - PG DN
+    - F13
+    - LALT
+    - LCTRL
+    - DEL
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - RCTRL
+  F Keys (Win):
+  - - {t: ESCAPE, h: OUT TOG}
+    - {t: F1, h: '&btsel'}
+    - {t: F2, h: '&btsel 1'}
+    - {t: F3, h: '&btsel 2'}
+    - {t: F4, h: '&btsel 3'}
+    - {t: F5, h: '&btsel 4'}
+    - F6
+    - F7
+    - F8
+    - F9
+    - F10
+    - F11
+  - - Sft+TAB
+    - '&mac_talk'
+    - {t: ▽, type: trans}
+    - PREV
+    - PP
+    - NEXT
+    - HOME
+    - UP
+    - END
+    - Alt+PSCRN
+    - PG UP
+    - F12
+  - - {t: ▽, type: trans}
+    - '&bl BL_TOG'
+    - '&bl BL_SET 4'
+    - VOL DN
+    - MUTE
+    - VOL UP
+    - MUTE
+    - '&mkp LCLK'
+    - LEFT
+    - DOWN
+    - RIGHT
+    - Gui+Sft+S
+  - - PG DN
+    - F13
+    - LALT
+    - LCTRL
+    - DEL
+    - {t: ▽, type: trans}
+    - {type: held}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - LALT
+  Settings:
+  - - OUT TOG
+    - {t: '1', h: '&btsel'}
+    - {t: '2', h: '&btsel 1'}
+    - {t: '3', h: '&btsel 2'}
+    - {t: '4', h: '&btsel 3'}
+    - {t: '5', h: '&btsel 4'}
+    - '6'
+    - '7'
+    - '8'
+    - '9'
+    - '0'
+    - '&soft_off'
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '4'
+    - '5'
+    - '6'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+  - - {t: ▽, type: trans}
+    - '&bl BL_TOG'
+    - {t: X, h: '&btclrmacro X'}
+    - '&bl BL_DEC'
+    - '&bl BL_TOG'
+    - '&bl BL_INC'
+    - '&bl BL_TOG'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '1'
+    - '2'
+    - '3'
+  - - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {type: held}
+    - '&df_win'
+    - '&df 2'
+    - '&df_mac'
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - {t: ▽, type: trans}
+    - '0'

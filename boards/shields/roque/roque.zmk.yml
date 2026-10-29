@@ -1,0 +1,14 @@
+file_format: "1"
+id: roque
+name: Roque
+type: shield
+url: https://github.com/LLMV99/miiUnic_Roque
+requires: [pro_micro]
+features:
+  - keys
+  - encoder
+  - backlight
+  - studio
+siblings:
+  - roque_left
+  - roque_right

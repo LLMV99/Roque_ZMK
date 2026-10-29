@@ -1,0 +1,7 @@
+/ {
+    layout_roque_position_map: layout_roque_position_map {
+        compatible = "zmk,physical-layout-position-map";
+
+        complete;
+    };
+};
