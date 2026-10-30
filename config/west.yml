@@ -6,12 +6,14 @@ manifest:
       url-base: https://github.com/elpekenin
     - name: MickiusMousius
       url-base: https://github.com/MickiusMousius
+    - name: LLMV99
+      url-base: https://github.com/LLMV99
 
   projects:
     - name: zmk
       import: app/west.yml
-      remote: zmkfirmware
-      revision: f9be3ed9c08b35b1b86df24c0f04913f3b5e50f5
+      remote: LLMV99
+      revision: main
 
     - name: zmk-userspace
       remote: elpekenin
