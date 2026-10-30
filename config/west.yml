@@ -6,11 +6,8 @@ manifest:
       url-base: https://github.com/elpekenin
     - name: MickiusMousius
       url-base: https://github.com/MickiusMousius
-    - name: m165437
-      url-base: https://github.com/M165437
-    # Used only by the Roque nice!view targets in build.yaml.
-    - name: infely
-      url-base: https://github.com/infely
+    - name: LLMV99
+      url-base: https://github.com/LLMV99
 
   projects:
     - name: zmk
@@ -34,13 +31,8 @@ manifest:
       remote: MickiusMousius
       revision: main
 
-    - name: nice-view-gem
-      remote: m165437
-      revision: v0.3.0
-
-    # Infely display: selected only by the two Roque build targets.
-    - name: nice-view-battery
-      remote: infely
+    - name: nice-view-mod
+      remote: LLMV99
       revision: main
 
   self:
