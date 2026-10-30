@@ -6,8 +6,17 @@ manifest:
       url-base: https://github.com/elpekenin
     - name: MickiusMousius
       url-base: https://github.com/MickiusMousius
+    - name: m165437
+      url-base: https://github.com/M165437
+    # Used only by the Roque nice!view targets in build.yaml.
+    - name: infely
+      url-base: https://github.com/infely
 
   projects:
+    - name: zmk
+      import: app/west.yml
+      remote: zmkfirmware
+      revision: f9be3ed9c08b35b1b86df24c0f04913f3b5e50f5
 
     - name: zmk-userspace
       remote: elpekenin
@@ -23,6 +32,15 @@ manifest:
 
     - name: zmk-patch-ec11
       remote: MickiusMousius
+      revision: main
+
+    - name: nice-view-gem
+      remote: m165437
+      revision: v0.3.0
+
+    # Infely display: selected only by the two Roque build targets.
+    - name: nice-view-battery
+      remote: infely
       revision: main
 
   self:
