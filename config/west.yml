@@ -7,7 +7,7 @@ manifest:
     - name: MickiusMousius
       url-base: https://github.com/MickiusMousius
     - name: LLMV99
-      url-base: https://github.com/LLMV99
+      url-base: https://github.com/LLMV99/zmk
 
   projects:
     - name: zmk
