@@ -2,19 +2,21 @@
 &pinctrl {
     pwm0_default: pwm0_default {
         group1 {
+            // Use P0.06 for LED backlight
             psels = <NRF_PSEL(PWM_OUT0, 0, 6)>;
-        };
+          };
     };
 
     pwm0_sleep: pwm0_sleep {
         group1 {
+            // Use P0.06 for LED backlight
             psels = <NRF_PSEL(PWM_OUT0, 0, 6)>;
             low-power-enable;
-        };
+          };
     };
 };
 
-// Enable SPI for MIP display
+// Enable SPI for MIP display 
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
@@ -23,7 +25,6 @@
                 <NRF_PSEL(SPIM_MISO, 0, 25)>;
         };
     };
-
     spi0_sleep: spi0_sleep {
         group1 {
             psels = <NRF_PSEL(SPIM_SCK, 0, 20)>,
@@ -44,4 +45,9 @@ nice_view_spi: &spi0 {
 
 &pro_micro_i2c {
     status = "disabled";
+};
+
+// Use the LiPo discharge curve module 
+&vbatt {
+    compatible = "zmk,battery-nrf-vddh-curve";
 };
