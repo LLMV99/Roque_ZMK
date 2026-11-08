@@ -87,11 +87,5 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&caps_word>;
         };
-        ipad_mode: ipad_mode {
-            display-name = "iPad Mode";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&df IPAD>;
-        };
     };
 };
