@@ -40,8 +40,8 @@
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
 // ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬─────────────────┬───────────────────────╮
-       &kp GRAVE        &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LA(BSPC) BSPC
-       &kp TAB          &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
+       &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LA(BSPC) BSPC
+       &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
        &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B           &kp F16             &kp F17               &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH           &kp SQT
 /* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt M_FKEYS ENTER         &td1           &mt RGUI K_APP       &kp DEL     //├───────────────┴─────────────────┴───────────────────────╯
 //                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴─────────────────╯
@@ -53,8 +53,8 @@
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
 // ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬───────────────┬─────────────────────────╮
-       &kp GRAVE        &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LA(BSPC) BSPC
-       &kp TAB          &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
+       &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LA(BSPC) BSPC
+       &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
        &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B           &kp F16             &kp F17               &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
 /* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LGUI        &kp LCTRL    &lt NUMPAD SPACE    &lt W_FKEYS ENTER        &td2           &mt RALT QUESTION    &kp DEL    //├───────────────┴───────────────┴──────────────────────────╯
 //                                              ╰─────────────────────┴─────────────────┴────────────┴─────────────────╯╰─────────────────────┴───────────────┴──────────────────────┴───────────────╯
@@ -69,7 +69,7 @@
        &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LC(BSPC) BSPC
        &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
        &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B           &kp F16             &kp F17               &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
-/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT K_APP       &kp DEL     //├───────────────┴─────────────────┴───────────────────────╯
+/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QUESTION    &kp DEL     //├───────────────┴─────────────────┴───────────────────────╯
 //                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴─────────────────╯
             >;
         };
