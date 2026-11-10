@@ -121,7 +121,7 @@
 // ╭───────────────┬──────────────────────┬────────────────────┬───────────────────┬───────────────┬─────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬─────────────────┬──────────────────╮
        ___             &kp N1               &kp N2               &kp N3              &kp N4          &kp N5    /*|                                 |*/  &kp N6         &kp N7          &kp N8          &kp N9          &kp N0          ___ 
        ___             &kp EXCL             &kp AT               &kp HASH            &kp DLLR        &kp PRCNT /*├───────────────╮     ╭───────────┤*/  &kp CARET      &kp N4          &kp N5          &mt LPAR N6     &mt RPAR PLUS   &kp MINUS
-       &shift_mclick    &shift_ctrl_mclick   &kp LEFT_BRACE      &kp RIGHT_BRACE     &kp PIPE        &kp EQUAL       ___                 ___            &kp PRCNT      &kp N1          &mt COMMA N2    &mt DOT N3      &kp KP_DIVIDE   &kp KP_MULTIPLY
+       ___             ___                  &kp LEFT_BRACE       &kp RIGHT_BRACE     &kp PIPE        &kp EQUAL       ___                 ___            &kp PRCNT      &kp N1          &mt COMMA N2    &mt DOT N3      &kp KP_DIVIDE   &kp KP_MULTIPLY
 /* ╰───────────────┴──────────────────────┴────────────────────┤*/      ___          ___             ___             ___                 ___            &tog NUMPAD    &kp KP_DOT      &kp N0    //├───────────────┴─────────────────┴──────────────────╯
 //                                                             ╰───────────────────┴───────────────┴───────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────┴─────────────╯
             >;
