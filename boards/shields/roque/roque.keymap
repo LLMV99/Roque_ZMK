@@ -62,7 +62,7 @@
             >;
         };
 
-        Linux_default_layer {
+        Linux_CLK_default_layer {
             display-name = "Lnx_CLK";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
