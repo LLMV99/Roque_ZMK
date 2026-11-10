@@ -21,12 +21,13 @@
 #define MACOS     0
 #define WINDOWS   1
 #define LINUX_CLK 2
-#define M_SYMBOLS 3
-#define W_SYMBOLS 4
-#define NUMPAD    5
-#define M_FKEYS   6
-#define W_FKEYS   7
-#define KB_CONFIG 8
+#define LINUX     3
+#define M_SYMBOLS 4
+#define W_SYMBOLS 5
+#define NUMPAD    6
+#define M_FKEYS   7
+#define W_FKEYS   8
+#define KB_CONFIG 9
 
 #include "keymap_behaviors.dtsi"
 #include "keymap_macros.dtsi"
@@ -62,13 +63,26 @@
         };
 
         Linux_default_layer {
-            display-name = "Linux_CLK";
+            display-name = "Lnx_CLK";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
 // ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬───────────────┬─────────────────────────╮
        &kp  GRAVE       &kp Q          &kp W        &kp F                 &kp P           &kp B   /*|                                         |*/   &kp J          &kp L                &kp U               &kp Y           &kp SEMI          &mt LC(BSPC) BSPC
        &kp  TAB         &kp A          &kp R        &kp S                 &kp T           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp M          &kp N                &kp E               &kp I           &kp O             &kp BSLH
        &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp D           &kp V       &kp F16             &kp F17                   &kp K          &kp H                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
+/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &kp DEL     //├───────────────┴───────────────┴─────────────────────────╯
+//                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴─────────────────╯
+            >;
+        };
+
+        Linux_default_layer {
+            display-name = "Linux";
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
+            bindings = <
+// ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬───────────────┬─────────────────────────╮
+       &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LC(BSPC) BSPC
+       &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
+       &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B       &kp F16             &kp F17                   &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
 /* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &kp DEL     //├───────────────┴───────────────┴─────────────────────────╯
 //                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴─────────────────╯
             >;
@@ -150,7 +164,7 @@
       &out OUT_TOG     &btkp 0 N1      &btkp 1 N2      &btkp 2 N3      &btkp 3 N4      &btkp 4 N5 /*|                                 |*/   &kp N6         &kp N7          &kp N8          &kp N9          &kp N0          &soft_off
       ___              ___             ___             ___             ___             ___        /*├──────────────╮     ╭────────────┤*/   ___            &kp N4          &kp N5          &kp N6          ___             ___
       ___              &bl BL_TOG      &btclr_kp X X   &bl BL_DEC      &bl BL_TOG      &bl BL_INC      &bl BL_TOG           ___             ___            &kp N1          &kp N2          &kp N3          ___             ___
-/* ╰───────────────┴───────────────┴───────────────┤*/ ___             &df_win         &df_lin         &df_mac              ___             ___            ___             &kp N0   //├───────────────┴───────────────┴───────────────╯
+/* ╰───────────────┴───────────────┴───────────────┤*/ ___             &df_win         &df_lnx2        &df_mac              &df_lnx1             ___            ___             &kp N0   //├───────────────┴───────────────┴───────────────╯
 //                                                 ╰───────────────┴───────────────┴────────────────┴──────────────╯     ╰─────────────┴───────────────┴───────────────┴──────────────╯   
             >;
         };
