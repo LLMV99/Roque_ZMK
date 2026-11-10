@@ -56,20 +56,20 @@
        &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LA(BSPC) BSPC
        &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
        &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B           &kp F16             &kp F17               &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
-/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LGUI        &kp LCTRL    &lt NUMPAD SPACE    &lt W_FKEYS ENTER        &td2           &mt RALT QUESTION    &kp DEL    //├───────────────┴───────────────┴──────────────────────────╯
+/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LGUI        &kp LCTRL    &lt NUMPAD SPACE    &lt W_FKEYS ENTER        &td2           &mt RALT QUESTION    &kp DEL    //├────────────────┴───────────────┴──────────────────────────╯
 //                                              ╰─────────────────────┴─────────────────┴────────────┴─────────────────╯╰─────────────────────┴───────────────┴──────────────────────┴───────────────╯
             >;
         };
-        
+
         Linux_default_layer {
-            display-name = "Linux";
+            display-name = "Linux CLK";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
 // ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬───────────────┬─────────────────────────╮
-       &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LC(BSPC) BSPC
-       &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
-       &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B           &kp F16             &kp F17               &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
-/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &kp DEL     //├───────────────┴─────────────────┴───────────────────────╯
+       &kp  GRAVE       &kp Q          &kp W        &kp F                 &kp P           &kp B   /*|                                         |*/   &kp J          &kp L                &kp U               &kp Y           &kp SEMI          &mt LC(BSPC) BSPC
+       &kp  TAB         &kp A          &kp R        &kp S                 &kp T           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp M          &kp N                &kp E               &kp I           &kp O             &kp BSLH
+       &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp D           &kp V           &kp F16             &kp F17               &kp K          &kp H                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
+/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &kp DEL     //├───────────────┴───────────────┴─────────────────────────╯
 //                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴─────────────────╯
             >;
         };
@@ -80,8 +80,8 @@
             bindings = <
 // ╭───────────────┬──────────────────────┬──────────────────────┬────────────────────┬───────────────┬──────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬──────────────────┬──────────────────╮
        &kp UNDER       &kp N1                   &kp N2               &kp N3              &kp N4          &kp N5    /*|                                 |*/  &kp N6         &kp N7          &kp N8          &kp N9          &kp N0               &kp DEL
-       &kp ___         &kp EXCL                 &kp AT               &kp HASH            &kp DLLR        &kp PRCNT /*├─────────────╮     ╭─────────────┤*/  &kp CARET      &kp AMPERSAND   &kp STAR        &kp LPAR        &kp RPAR             &kp MINUS
-       &kp LG(DOT)     ___                      &kp LEFT_BRACE       &kp RIGHT_BRACE     &kp PIPE        &kp EQUAL       ___                 ___            &kp PRCNT      &kp PLUS        &kp LBKT        &kp RBKT        &kp BACKSLASH        ___
+       &kp ___         &kp EXCL                 &kp AT               &kp HASH            &kp DLLR        &kp PRCNT /*├─────────────╮     ╭─────────────┤*/  &kp CARET      &kp AMPERSAND   &kp STAR        &kp LPAR        &kp RPAR             &kp BSLH
+       &kp LG(DOT)     ___                      &kp LEFT_BRACE       &kp RIGHT_BRACE     &kp PIPE        &kp EQUAL       ___                 ___            &kp PRCNT      &kp PLUS        &kp LBKT        &kp RBKT        &kp BACKSLASH        &kp MINUS
 /* ╰───────────────┴──────────────────────┴──────────────────────┤*/ ___                 ___             ___             ___                 ___            ___            ___             ___       //├───────────────┴──────────────────┴──────────────────╯
 //                                                               ╰────────────────────┴───────────────┴──────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────┴───────────────╯
             >;
@@ -107,9 +107,9 @@
 // ╭───────────────┬──────────────────────┬────────────────────┬───────────────────┬───────────────┬─────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬─────────────────┬──────────────────╮
        ___             &kp N1               &kp N2               &kp N3              &kp N4          &kp N5    /*|                                 |*/  &kp N6         &kp N7          &kp N8          &kp N9          &kp N0          ___ 
        ___             &kp EXCL             &kp AT               &kp HASH            &kp DLLR        &kp PRCNT /*├─────────────╮     ╭─────────────┤*/  &kp CARET      &kp N4          &kp N5          &mt LPAR N6     &mt RPAR PLUS   &kp MINUS
-       &shift_mclick    &shift_ctrl_mclick   &kp LEFT_BRACE       &kp RIGHT_BRACE     &kp PIPE        &kp EQUAL       ___                 ___            &kp PRCNT      &kp N1          &mt COMMA N2    &mt DOT N3      &kp KP_DIVIDE   &kp KP_MULTIPLY
+       &shift_mclick    &shift_ctrl_mclick   &kp LEFT_BRACE      &kp RIGHT_BRACE     &kp PIPE        &kp EQUAL       ___                 ___            &kp PRCNT      &kp N1          &mt COMMA N2    &mt DOT N3      &kp KP_DIVIDE   &kp KP_MULTIPLY
 /* ╰───────────────┴──────────────────────┴────────────────────┤*/      ___          ___             ___             ___                 ___            &tog NUMPAD    &kp KP_DOT      &kp N0    //├───────────────┴─────────────────┴──────────────────╯
-//                                                             ╰───────────────────┴───────────────┴───────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────┴───────────────╯
+//                                                             ╰───────────────────┴───────────────┴───────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────┴─────────────╯
             >;
       };
 
