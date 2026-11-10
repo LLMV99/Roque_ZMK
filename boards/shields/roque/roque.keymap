@@ -20,7 +20,7 @@
 // Layer numbers for use by the keymap & macros
 #define MACOS     0
 #define WINDOWS   1
-#define Linux_CLK 2
+#define LINUX_CLK 2
 #define M_SYMBOLS 3
 #define W_SYMBOLS 4
 #define NUMPAD    5
