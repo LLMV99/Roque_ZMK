@@ -29,6 +29,13 @@
             #binding-cells = <0>;
             bindings = <&df WINDOWS>;
         };
+        df_lin: df_lin {
+            display-name = "Set Connection Default Layer to Linux_CLK";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&df LINUX_CLK>;
+        };
+
         // Invoke MacOS dictation
         mac_talk: mac_talk {
             display-name = "MacOS Dictation";
