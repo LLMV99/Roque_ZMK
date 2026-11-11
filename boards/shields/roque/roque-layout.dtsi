@@ -6,7 +6,7 @@
     roque_layout: roque_layout {
         compatible = "zmk,physical-layout";
         display-name = "Roque";
-    
+
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0    0  (-800)   285   285>
             , <&key_physical_attrs 100 100  100    5  (-400)   350   275>
@@ -48,12 +48,12 @@
             , <&key_physical_attrs 100 100  350  305       0     0     0>
             , <&key_physical_attrs 100 100  450  305    1000   450   385>
             , <&key_physical_attrs 100 100  550  305    2000   500   385>
+            , <&key_physical_attrs 100 100  650  235       0     0     0>
+            , <&key_physical_attrs 100 100  850  235       0     0     0>
             , <&key_physical_attrs 100 100  950  305 (-2000)  1100   385>
             , <&key_physical_attrs 100 100 1050  305 (-1000)  1150   385>
             , <&key_physical_attrs 100 100 1150  305       0     0     0>
             , <&key_physical_attrs 100 100 1250  305       0     0     0>
-            , <&key_physical_attrs 100 100  650  235       0     0     0>
-            , <&key_physical_attrs 100 100  850  235       0     0     0>
             ;
     };
 };
@@ -63,8 +63,8 @@
         positions
             = < 0  1  2  3  4  5         6  7  8  9 10 11>
             , <12 13 14 15 16 17        18 19 20 21 22 23>
-            , <24 25 26 27 28 29 44  45 30 31 32 33 34 35>
-            , <         36 37 38 39  40 41 42 43      >;
+            , <24 25 26 27 28 29 40  41 30 31 32 33 34 35>
+            , <         36 37 38 39  42 43 44 45      >;
     };
 
 };
