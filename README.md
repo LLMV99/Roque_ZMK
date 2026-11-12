@@ -1,13 +1,7 @@
 # miiUnic Roque
 
 <p align="center">
-  <img src="doc/images/roque/roque-black.jpg" alt="miiUnic Roque keyboard — black build" width="48%" />
-  <img src="doc/images/roque/roque-hand.jpg" alt="miiUnic Roque keyboard being used" width="48%" />
-</p>
-<p align="center">
-  <img src="doc/images/roque/roque-red.jpg" alt="miiUnic Roque keyboard — red build" width="48%" />
-  <img src="doc/images/roque/roque-white.jpg" alt="miiUnic Roque keyboard — white build" width="48%" />
-</p>
+  <img src="/home/luis/Pictures/Screenshots" alt="miiUnic Roque layout" width="48%" />
 
 Firmware and configuration for the **miiUnic Roque**, a custom split wireless keyboard built around the nice!nano v2 / nRF52840 controller.
 
