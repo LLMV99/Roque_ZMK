@@ -1,7 +1,7 @@
 # miiUnic Roque
 
 <p align="center">
-  <img src="ZMK Studio Layout.png" alt="miiUnic Roque" width="600">
+  <img src="doc/images/miiUnic-mascota.png" alt="miiUnic Roque" width="420">
 </p>
 
 Firmware and configuration for the **miiUnic Roque**, a custom split wireless keyboard built around the nice!nano v2 / nRF52840 controller.
