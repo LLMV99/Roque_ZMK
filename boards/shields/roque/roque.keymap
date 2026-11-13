@@ -57,7 +57,7 @@
        &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LA(BSPC) BSPC
        &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├─────────────────╮╭──────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
        &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B       &kp F16             &kp F17                   &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
-/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LGUI        &kp LCTRL   &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &kp DEL     //├───────────────┴───────────────┴─────────────────────────╯
+/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LGUI        &kp LCTRL   &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &kp DEL        //├───────────────┴───────────────┴─────────────────────────╯
 //                                              ╰─────────────────────┴─────────────────┴───────────┴─────────────────╯╰─────────────────────┴────────────────┴─────────────────────┴─────────────────╯
             >;
         };
@@ -83,7 +83,7 @@
        &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LC(BSPC) BSPC
        &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
        &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B       &kp F16             &kp F17                   &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
-/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &mt DEL PSCRN  //├───────────────┴───────────────┴─────────────────────────╯
+/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &kp DEL PSCRN  //├───────────────┴───────────────┴─────────────────────────╯
 //                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴────────────────────╯
             >;
         };
@@ -147,7 +147,7 @@
             bindings = <
 // ╭────────────────────────────────┬───────────────┬───────────────┬───────────────┬───────────────┬────────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
         &usb_tog OUT_TOG ESCAPE         &btkp 0 F1      &btkp 1 F2      &btkp 2 F3      &btkp 3 F4      &btkp 4 F5 /*|                                 |*/   &kp F6         &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
-        &kp LS(TAB)                     &mac_talk       ___             &kp C_PREV      &kp C_PP        &kp C_NEXT /*├─────────────╮     ╭─────────────┤*/   &kp HOME       &kp UP          &kp END         &kp LA(PSCRN)   &kp PG_UP       &kp F12
+        &kp LS(TAB)                     ___             ___             &kp C_PREV      &kp C_PP        &kp C_NEXT /*├─────────────╮     ╭─────────────┤*/   &kp HOME       &kp UP          &kp END         &kp LA(PSCRN)   &kp PG_UP       &kp F12
         ___                             &bl BL_TOG      &bl BL_SET 4    &kp C_VOL_DN    &kp C_MUTE      &kp C_VOL_UP    &kp C_MUTE          &mkp LCLK        &kp LEFT       &kp DOWN        &kp RIGHT       &kp LG(LS(S))   &kp PG_DN       &kp F13
 /* ╰────────────────────────────────┴───────────────────────────────┤*/ &kp LALT        &kp LCTRL       &kp DEL         ___                 ___              ___            ___             &kp LALT //├───────────────┴───────────────┴───────────────╯
 //                                                                  ╰───────────────┴───────────────┴────────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────┴───────────────╯
