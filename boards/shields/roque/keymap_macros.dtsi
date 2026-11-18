@@ -53,7 +53,7 @@
         };
 
         df_lnx1: df_lnx1 {
-            display-name = "Set Connection Default Layer to Lnx_CLK";
+            display-name = "Set Connection Default Layer to Colemak in Linux";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&df LNX_CLK>;
@@ -100,17 +100,6 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>;
-        };
-
-        // Macro Mouse Clicks For Freecat
-        mouse_left_middle: mouse_left_middle {
-            display-name = "Mouse Middle + Left Click";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&mkp MCLK>
-                , <&mkp LCLK>
-                ;
         };
     };
 };}
