@@ -49,7 +49,7 @@
             display-name = "Set Connection Default Layer to Lnx_CLK";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&df LINUX_CLK>;
+            bindings = <&df LNX_CLK>;
         };
         df_lnx2: df_lnx2 {
             display-name = "Set Connection Default Layer to Linux";
@@ -90,6 +90,15 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>;
+        };
+        // Macro Mouse Clicks For Freecat
+        mouse_middle_left: mouse_middle_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&mkp MB3>
+                , <&mkp MB1>
+                ;
         };
     };
 };
