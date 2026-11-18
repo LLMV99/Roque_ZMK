@@ -9,7 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/backlight.h>
-#include <dt-bindings/zmk/pointing.h>
 #include "elpekenin/behaviors.dtsi"
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
@@ -29,6 +28,10 @@
 #define M_FKEYS   7
 #define W_FKEYS   8
 #define KB_CONFIG 9
+#define MUP &mmv MOVE_UP
+#define MDN &mmv MOVE_DOWN
+#define MLT &mmv MOVE_LEFT
+#define MRT &mmv MOVE_RIGHT
 
 #include "keymap_behaviors.dtsi"
 #include "keymap_macros.dtsi"
@@ -54,7 +57,7 @@
             display-name = "Windows";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-// ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬───────────────┬─────────────────────────╮
+// ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬───────────────┬────────────────────────────╮
        &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LA(BSPC) BSPC
        &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├─────────────────╮╭──────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
        &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B       &kp F16             &kp F17                   &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
@@ -67,12 +70,12 @@
             display-name = "Lnx_CLK";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-// ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬───────────────┬─────────────────────────╮
-       &kp  GRAVE       &kp Q          &kp W        &kp F                 &kp P           &kp B   /*|                                         |*/   &kp J          &kp L                &kp U               &kp Y           &kp SEMI          &mt LC(BSPC) BSPC
-       &kp  TAB         &kp A          &kp R        &kp S                 &kp T           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp M          &kp N                &kp E               &kp I           &kp O             &kp BSLH
-       &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp D           &kp V       &kp F16             &kp F17                   &kp K          &kp H                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
-/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &mt DEL PSCRN //├───────────────┴───────────────┴─────────────────────────╯
-//                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴───────────────────╯
+// ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬───────────────────────────┬───────────────┬───────────────┬───────────────────────────╮
+       &kp  GRAVE       &kp Q          &kp W        &kp F                 &kp P           &kp B   /*|                                         |*/   &kp J          &kp L                &kp U                           &kp Y           &kp SEMI      &mt LC(BSPC) BSPC
+       &kp  TAB         &kp A          &kp R        &kp S                 &kp T           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp M          &kp N                &kp E                           &kp I           &kp O         &kp BSLH
+       &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp D           &kp V       &kp F16             &kp F17                   &kp K          &kp H                &kp COMMA                       &kp DOT         &kp FSLH      &kp APOS
+/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &mt PSCRN DEL         //├───────────────┴───────────────┴───────────────────────────╯
+//                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴───────────────────────────╯
             >;
         };
 
@@ -80,12 +83,12 @@
             display-name = "Linux";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-// ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬───────────────┬─────────────────────────╮
-       &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LC(BSPC) BSPC
-       &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
-       &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B       &kp F16             &kp F17                   &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
-/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &mt DEL PSCRN  //├───────────────┴───────────────┴─────────────────────────╯
-//                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴────────────────────╯
+// ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬────────────────────────────┬───────────────┬───────────────┬─────────────────────────╮
+       &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I                       &kp O           &kp P             &mt LC(BSPC) BSPC
+       &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp H          &kp J                &kp K                       &kp L           &kp SEMI          &kp BSLH
+       &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B       &kp F16             &kp F17                   &kp N          &kp M                &kp COMMA                   &kp DOT         &kp FSLH          &kp APOS
+/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &mt PSCRN DEL          //├───────────────┴───────────────┴─────────────────────────╯
+//                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴────────────────────────────╯
             >;
         };
 
@@ -163,10 +166,10 @@
             bindings = <
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬────────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
       &out OUT_TOG     &btkp 0 N1      &btkp 1 N2      &btkp 2 N3      &btkp 3 N4      &btkp 4 N5 /*|                                 |*/   &kp N6         &kp N7          &kp N8          &kp N9          &kp N0          &soft_off
-      ___              ___             ___             ___             ___             ___        /*├──────────────╮     ╭────────────┤*/   ___            &kp N4          &kp N5          &kp N6          ___             ___
-      ___              &bl BL_TOG      &btclr_kp X X   &bl BL_DEC      &bl BL_TOG      &bl BL_INC      &bl BL_TOG           ___             ___            &kp N1          &kp N2          &kp N3          ___             ___
-/* ╰───────────────┴───────────────┴───────────────┤*/ ___             &df_win         &df_lnx2        &df_mac              &df_lnx1             ___            ___             &kp N0   //├───────────────┴───────────────┴───────────────╯
-//                                                 ╰───────────────┴───────────────┴────────────────┴──────────────╯     ╰─────────────┴───────────────┴───────────────┴──────────────╯   
+      ___              ___             ___             ___             ___             ___        /*├──────────────╮     ╭────────────┤*/   &kp PG_UP      &mkp MB1        MUP             &mkp MB2          ___             ___
+      ___              &bl BL_TOG      &btclr_kp X X   &bl BL_DEC      &bl BL_TOG      &bl BL_INC      &bl BL_TOG           ___             &kp PG_DN      MLT             MDN             MRT               ___             ___
+/* ╰───────────────┴───────────────┴───────────────┤*/ ___             &df_win         &df_lnx2        &df_mac              &df_lnx1        &mkp MB1       &mkp MB2        &mkp MB3 //├───────────────┴───────────────┴───────────────╯
+//                                                 ╰───────────────┴───────────────┴────────────────┴──────────────╯     ╰─────────────┴───────────────┴───────────────┴──────────────╯
             >;
         };
 
