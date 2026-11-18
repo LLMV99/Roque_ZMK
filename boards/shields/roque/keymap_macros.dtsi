@@ -1,7 +1,8 @@
+
 / {
 
-    macros{
-        // Select bluetooth profile helper  for behaviours
+    macros {
+        // Select bluetooth profile helper for behaviours
         btsel: btsel {
             display-name = "Bluetooth Profile Select";
             compatible = "zmk,behavior-macro-one-param";
@@ -9,6 +10,7 @@
             bindings = <&macro_param_1to2>
                 , <&bt BT_SEL MACRO_PLACEHOLDER>;
         };
+
         // Force output to USB
         output_usb: output_usb {
             display-name = "Output USB";
@@ -16,6 +18,7 @@
             #binding-cells = <0>;
             bindings = <&out OUT_USB>;
         };
+
         // Force output to BLE and select profile
         output_bt: output_bt {
             display-name = "Output Bluetooth Profile Select";
@@ -25,13 +28,15 @@
                 , <&macro_param_1to2>
                 , <&bt BT_SEL MACRO_PLACEHOLDER>;
         };
-        // Select bluetooth profile helper  for behaviours
+
+        // Select bluetooth profile helper for behaviours
         btclrmacro: btclrmacro {
             display-name = "Bluetooth Profile Clear";
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&bt BT_CLR>;
         };
+
         // Utilities
         df_mac: df_mac {
             display-name = "Set Connection Default Layer to MacOS";
@@ -39,18 +44,21 @@
             #binding-cells = <0>;
             bindings = <&df MACOS>;
         };
+
         df_win: df_win {
             display-name = "Set Connection Default Layer to Windows";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&df WINDOWS>;
         };
+
         df_lnx1: df_lnx1 {
             display-name = "Set Connection Default Layer to Lnx_CLK";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&df LNX_CLK>;
         };
+
         df_lnx2: df_lnx2 {
             display-name = "Set Connection Default Layer to Linux";
             compatible = "zmk,behavior-macro";
@@ -69,6 +77,7 @@
                 , <&kp GLOBE>
                 ;
         };
+
         // MacOS Screenshot Current App
         mac_cap_app: mac_cap_app {
             display-name = "MacOS Screenshot App";
@@ -83,6 +92,7 @@
                 , <&macro_tap &mkp LCLK>
                 ;
         };
+
         // Macro KP
         kpss: kpss {
             display-name = "Key Press (No Repeat)";
@@ -91,14 +101,16 @@
             bindings = <&macro_param_1to1>
                 , <&macro_tap &kp MACRO_PLACEHOLDER>;
         };
+
         // Macro Mouse Clicks For Freecat
         mouse_middle_left: mouse_middle_left {
+            display-name = "Middle Click + Mouse Left";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&mkp MB3>
-                , <&mkp MB1>
+                = <&macro_tap &mkp MCLK>
+                , <&macro_tap &mkp LCLK>
                 ;
         };
     };
-};
+};}
