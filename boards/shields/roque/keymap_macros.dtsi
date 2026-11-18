@@ -102,4 +102,4 @@
                 , <&macro_tap &kp MACRO_PLACEHOLDER>;
         };
     };
-};}
+};
