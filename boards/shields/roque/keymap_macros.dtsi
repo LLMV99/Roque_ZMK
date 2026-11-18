@@ -102,7 +102,7 @@
                 , <&macro_tap &kp MACRO_PLACEHOLDER>;
         };
         // Macro Mouse Clicks For Freecat
-        mouse_left_middle: mouse_left_middle {
+        mouse_middle_left: mouse_middle_left {
             display-name = "Mouse Middle + Left Click";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
