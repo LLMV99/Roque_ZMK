@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/backlight.h>
 #include "elpekenin/behaviors.dtsi"
-
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 900
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 #include <dt-bindings/zmk/pointing.h>
 
@@ -57,11 +57,11 @@
             display-name = "Windows";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
-// ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬───────────────┬────────────────────────────╮
+// ╭─────────────────┬─────────────┬────────────┬────────────────────┬─────────────────┬────────────╮                                         ╭───────────────┬─────────────────────┬─────────────────┬───────────────┬───────────────┬─────────────────────────╮
        &kp  GRAVE       &kp Q          &kp W        &kp E                 &kp R           &kp T   /*|                                         |*/   &kp Y          &kp U                &kp I               &kp O           &kp P             &mt LA(BSPC) BSPC
        &kp  TAB         &kp A          &kp S        &kp D                 &kp F           &kp G   /*├─────────────────╮╭──────────────────────┤*/   &kp H          &kp J                &kp K               &kp L           &kp SEMI          &kp BSLH
        &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp V           &kp B       &kp F16             &kp F17                   &kp N          &kp M                &kp COMMA           &kp DOT         &kp FSLH          &kp APOS
-/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LGUI        &kp LCTRL   &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &kp DEL        //├───────────────┴───────────────┴─────────────────────────╯
+/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LGUI        &kp LCTRL   &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &kp DEL     //├───────────────┴───────────────┴─────────────────────────╯
 //                                              ╰─────────────────────┴─────────────────┴───────────┴─────────────────╯╰─────────────────────┴────────────────┴─────────────────────┴─────────────────╯
             >;
         };
@@ -113,7 +113,7 @@
        &kp UNDER       &kp N1                   &kp N2               &kp N3              &kp N4          &kp N5    /*|                                 |*/  &kp N6         &kp N7          &kp N8          &kp N9          &kp N0               &kp DEL
        &kp TILDE       &kp EXCL                 &kp AT               &kp HASH            &kp DLLR        &kp PRCNT /*├─────────────╮     ╭─────────────┤*/  &kp CARET      &kp AMPERSAND   &kp LT          &kp GT          &kp LPAR             &kp RPAR
        &kp LG(DOT)     ___                      &kp LEFT_BRACE       &kp RIGHT_BRACE     &kp PIPE        &kp EQUAL       ___                 ___            &kp PRCNT      &kp PLUS        &kp LBKT        &kp RBKT        &kp BACKSLASH        &kp MINUS
-/* ╰───────────────┴──────────────────────┴──────────────────────┤*/ ___                 ___             ___             ___                 ___            ___            ___             ___       //├───────────────┴──────────────────┴──────────────────╯
+/* ╰───────────────┴──────────────────────┴──────────────────────┤*/ ___                 &kp K_CUT       &kp K_PASTE     &kp K_COPY          ___            ___            ___             ___       //├───────────────┴──────────────────┴──────────────────╯
 //                                                               ╰────────────────────┴───────────────┴──────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────┴───────────────╯
             >;
         };
@@ -123,9 +123,9 @@
             sensor-bindings = <&mac_vol &scroll_up_down>;
             bindings = <
 // ╭───────────────┬──────────────────────────┬───────────────────┬───────────────────┬───────────────┬──────────────╮                               ╭───────────────┬───────────────┬─────────────────┬─────────────┬─────────────────┬──────────────────╮
-       ___             &kp N1                   &kp N2               &kp N3              &kp N4          &kp N5    /*|                               |*/  &kp N6         &kp N7          &kp N8          &kp N9          &kp N0          ___ 
-       ___             &kp EXCL                 &kp AT               &kp HASH            &kp DLLR        &kp PRCNT /*├─────────────╮     ╭───────────┤*/  &kp CARET      &kp N4          &kp N5          &mt LPAR N6     &mt RPAR PLUS   &kp MINUS
-       ___             &mouse_middle_left       &kp LEFT_BRACE       &kp RIGHT_BRACE     &kp PIPE        &kp EQUAL      ___                 ___           &kp PRCNT      &kp N1          &mt COMMA N2    &mt DOT N3      &kp KP_DIVIDE   &kp KP_MULTIPLY
+       &kp K_CUT       &kp N1                   &kp N2               &kp N3              &kp N4          &kp N5    /*|                               |*/  &kp N6         &kp N7          &kp N8          &kp N9          &kp N0          ___ 
+       &kp K_COPY      &kp EXCL                 &kp AT               &kp HASH            &kp DLLR        &kp PRCNT /*├─────────────╮     ╭───────────┤*/  &kp CARET      &kp N4          &kp N5          &mt LPAR N6     &mt RPAR PLUS   &kp MINUS
+       &kp K_PASTE     &mouse_middle_left       &kp LEFT_BRACE       &kp RIGHT_BRACE     &kp PIPE        &kp EQUAL      ___                 ___           &kp PRCNT      &kp N1          &mt COMMA N2    &mt DOT N3      &kp KP_DIVIDE   &kp KP_MULTIPLY
 /* ╰───────────────┴──────────────────────────┴───────────────────┤*/      ___          ___             ___             ___                 ___           &tog NUMPAD    &kp KP_DOT      &kp N0      //├─────────────┴─────────────────┴──────────────────╯
 //                                                                ╰───────────────────┴───────────────┴──────────────┴─────────────╯     ╰───────────┴───────────────┴───────────────┴─────────────────╯
             >;
@@ -153,7 +153,7 @@
         &usb_tog OUT_TOG ESCAPE         &btkp 0 F1      &btkp 1 F2      &btkp 2 F3      &btkp 3 F4      &btkp 4 F5 /*|                                 |*/   &kp F6         &kp F7          &kp F8          &kp F9          &kp F10         &kp F11
         &kp LS(TAB)                     ___             ___             &kp C_PREV      &kp C_PP        &kp C_NEXT /*├─────────────╮     ╭─────────────┤*/   &kp HOME       &kp UP          &kp END         &kp LA(PSCRN)   &kp PG_UP       &kp F12
         ___                             &bl BL_TOG      &bl BL_SET 4    &kp C_VOL_DN    &kp C_MUTE      &kp C_VOL_UP    &kp C_MUTE          &mkp LCLK        &kp LEFT       &kp DOWN        &kp RIGHT       &kp LG(LS(S))   &kp PG_DN       &kp F13
-/* ╰────────────────────────────────┴───────────────────────────────┤*/ &kp LALT        &kp LCTRL       &kp DEL         ___                 ___              ___            ___             &kp LALT //├───────────────┴───────────────┴───────────────╯
+/* ╰────────────────────────────────┴───────────────────────────────┤*/ &kp LALT        &kp LCTRL       &kp DEL         ___                 ___              &kp K_CALC     ___             &kp LALT //├───────────────┴───────────────┴───────────────╯
 //                                                                  ╰───────────────┴───────────────┴────────────────┴─────────────╯     ╰─────────────┴───────────────┴───────────────┴───────────────╯
             >;
 
@@ -164,11 +164,11 @@
             display-name = "Settings";
             sensor-bindings = <&bri_adjust &inc_dec_kp LEFT RIGHT>;
             bindings = <
-// ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬────────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
+// ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬────────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬──────────────────────────╮
       &out OUT_TOG     &btkp 0 N1      &btkp 1 N2      &btkp 2 N3      &btkp 3 N4      &btkp 4 N5 /*|                                 |*/   &kp N6         &kp N7          &kp N8          &kp N9          &kp N0          &soft_off
-      &kp K_COPY       &kp K_PASTE     ___             ___             ___             ___        /*├──────────────╮     ╭────────────┤*/   &kp PG_UP      &mkp MB1        MUP             &mkp MB2          ___             ___
-      &kp K_CUT        &bl BL_TOG      &btclr_kp X X   &bl BL_DEC      &bl BL_TOG      &bl BL_INC      &bl BL_TOG           ___             &kp PG_DN      MLT             MDN             MRT               ___             ___
-/* ╰───────────────┴───────────────┴───────────────┤*/ ___             &df_win         &df_lnx2        &df_mac              &df_lnx1        &mkp MB1       &mkp MB2        &mkp MB3 //├───────────────┴───────────────┴───────────────╯
+      &kp K_COPY       &kp K_PASTE     ___             ___             ___             ___        /*├──────────────╮     ╭────────────┤*/   &kp PG_UP      &mkp MB1        MUP             &mkp MB2          ___           &kp C_AL_TASK_MANAGER
+      &kp K_CUT        &bl BL_TOG      &btclr_kp X X   &bl BL_DEC      &bl BL_TOG      &bl BL_INC      &bl BL_TOG           ___             &kp PG_DN      MLT             MDN             MRT               ___           &kp C_AL_COFFEE
+/* ╰───────────────┴───────────────┴───────────────┤*/ ___             &df_win         &df_lnx2        &df_mac              &df_lnx1        &mkp MB1       &mkp MB2        &mkp MB3 //├───────────────┴───────────────┴──────────────────────────╯
 //                                                 ╰───────────────┴───────────────┴────────────────┴──────────────╯     ╰─────────────┴───────────────┴───────────────┴──────────────╯
             >;
         };
