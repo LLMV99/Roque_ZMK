@@ -28,6 +28,7 @@
 #define M_FKEYS   7
 #define W_FKEYS   8
 #define KB_CONFIG 9
+#define CAD       10
 #define MUP &mmv MOVE_UP
 #define MDN &mmv MOVE_DOWN
 #define MLT &mmv MOVE_LEFT
@@ -66,7 +67,7 @@
             >;
         };
 
-        Linux_CLK_default_layer {
+        linux_clk_default_layer {
             display-name = "Lnx_CLK";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
@@ -74,12 +75,12 @@
        &kp  GRAVE       &kp Q          &kp W        &kp F                 &kp P           &kp B   /*|                                         |*/   &kp J          &kp L                &kp U                           &kp Y           &kp SEMI      &mt LC(BSPC) BSPC
        &kp  TAB         &kp A          &kp R        &kp S                 &kp T           &kp G   /*├──────────────────╮╭─────────────────────┤*/   &kp M          &kp N                &kp E                           &kp I           &kp O         &kp BSLH
        &scw LSHIFT 0    &kp Z          &kp X        &kp C                 &kp D           &kp V       &kp F16             &kp F17                   &kp K          &kp H                &kp COMMA                       &kp DOT         &kp FSLH      &kp APOS
-/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &kp LGUI    &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &mt PSCRN DEL         //├───────────────┴───────────────┴───────────────────────────╯
+/* ╰─────────────────┴─────────────┴────────────┤*/ &mo KB_CONFIG         &kp LCTRL       &td3        &lt NUMPAD SPACE    &lt W_FKEYS ENTER         &td2           &mt RALT QMARK       &mt PSCRN DEL         //├───────────────┴───────────────┴───────────────────────────╯
 //                                              ╰────────────────────┴─────────────────┴────────────┴──────────────────╯╰─────────────────────┴───────────────┴─────────────────────┴───────────────────────────╯
             >;
         };
 
-        Linux_default_layer {
+        linux_default_layer {
             display-name = "Linux";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
@@ -166,24 +167,36 @@
             bindings = <
 // ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬────────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬──────────────────────────╮
       &out OUT_TOG     &btkp 0 N1      &btkp 1 N2      &btkp 2 N3      &btkp 3 N4      &btkp 4 N5 /*|                                 |*/   &kp N6         &kp N7          &kp N8          &kp N9          &kp N0          &soft_off
-      &kp K_COPY       &kp K_PASTE     ___             ___             ___             ___        /*├──────────────╮     ╭────────────┤*/   &kp PG_UP      &mkp MB1        MUP             &mkp MB2          ___           &kp C_AL_TASK_MANAGER
-      &kp K_CUT        &bl BL_TOG      &btclr_kp X X   &bl BL_DEC      &bl BL_TOG      &bl BL_INC      &bl BL_TOG           ___             &kp PG_DN      MLT             MDN             MRT               ___           &kp C_AL_COFFEE
+      &kp K_COPY       &kp K_PASTE     ___             ___             ___             ___        /*├──────────────╮     ╭────────────┤*/   &kp PG_UP      &mkp MB1        MUP             &mkp MB2          ___           ___
+      &kp K_CUT        &bl BL_TOG      &btclr_kp X X   &bl BL_DEC      &bl BL_TOG      &bl BL_INC      &bl BL_TOG           ___             &kp PG_DN      MLT             MDN             MRT               ___           ___
 /* ╰───────────────┴───────────────┴───────────────┤*/ ___             &df_win         &df_lnx2        &df_mac              &df_lnx1        &mkp MB1       &mkp MB2        &mkp MB3 //├───────────────┴───────────────┴──────────────────────────╯
 //                                                 ╰───────────────┴───────────────┴────────────────┴──────────────╯     ╰─────────────┴───────────────┴───────────────┴──────────────╯
             >;
         };
 
+
+        cad_layer {
+            display-name = "CAD";
+            sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
+            bindings = <
+// ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬────────────────╮                                 ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────┬──────────────────────────╮
+      &kp HOME        &mkp MB1        MUP              &mkp MB3         ___          ___          /*|                                 |*/   &kp HOME       &kp N7          &kp N8          &kp N9            ___           ___
+      ___             MLT             MDN              MRT              ___          ___          /*├──────────────╮     ╭────────────┤*/   &kp PG_UP      &kp N4          &kp N5          &kp N6            ___           ___
+      &kp LCTRL       ___             ___              &mkp MB2         ___          ___                ___                 ___             &kp PG_DN      &kp N1          &mt COMMA N2    &mt DOT N3        ___           ___
+/* ╰───────────────┴───────────────┴───────────────┤*/ ___              ___          ___                &kp LCTRL           &mkp MB1        &mkp MB2       &mkp MB3        &kp N0   //├───────────────┴───────────────┴──────────────────────────╯
+//                                                 ╰───────────────┴───────────────┴────────────────┴──────────────╯     ╰─────────────┴───────────────┴───────────────┴──────────────╯
+            >;
+
+        };
+
         // Extra layers for ZMK Studio
+
         extra1 {
             status = "reserved";
         };
         extra2 {
             status = "reserved";
         };
-        extra3 {
-            status = "reserved";
-        };
-
     };
 
 };

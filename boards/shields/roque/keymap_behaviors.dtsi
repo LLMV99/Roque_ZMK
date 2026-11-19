@@ -1,7 +1,7 @@
 / {
 
     behaviors {
-        // Toggle Numbers layer
+        // Toggle Numbers and CAD layer
         td1: Toggle_Numpad_MacOS {
             display-name = "MacOS Symbols Tap Dance";
             compatible = "zmk,behavior-tap-dance";
@@ -16,6 +16,12 @@
             tapping-term-ms = <300>;
             bindings = <&mo W_SYMBOLS>, <&tog NUMPAD>;
         };
+        td3: Toggle_CAD {
+            display-name = "CAD Tap Dance";
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LGUI>, <&tog CAD>;
         //Backlight Brightness
         bri_adjust: Brightness_Scroller {
             label = "Scroller Brightness Adjust";
