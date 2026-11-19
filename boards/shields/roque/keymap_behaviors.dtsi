@@ -22,6 +22,7 @@
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LGUI>, <&tog CAD>;
+        };
         //Backlight Brightness
         bri_adjust: Brightness_Scroller {
             label = "Scroller Brightness Adjust";
